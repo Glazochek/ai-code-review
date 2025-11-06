@@ -1,10 +1,5 @@
-export type ReviewMode = 'improve' | 'faster' | 'shorter';
+import {ReviewButtonProps} from "../types";
 
-interface ReviewButtonProps {
-  func: (mode: ReviewMode) => any;
-  isLoading: boolean;
-  mode: ReviewMode;
-}
 
 export const ReviewButton = ({ func, isLoading, mode }: ReviewButtonProps) => {
   const handleClick = () => {
@@ -15,11 +10,10 @@ export const ReviewButton = ({ func, isLoading, mode }: ReviewButtonProps) => {
 
   return (
     <button
-      className={`button button-${mode}`}
       onClick={handleClick}
       disabled={isLoading}
     >
-      {isLoading ? 'Loading...' : mode}
+      {isLoading ? 'Processing...' : mode}
     </button>
   );
 };

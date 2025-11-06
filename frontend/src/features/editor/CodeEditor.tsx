@@ -1,12 +1,6 @@
 import { Editor } from '@monaco-editor/react'
+import { CodeEditorProps } from './types'
 
-interface CodeEditorProps {
-  value: string
-  onChange?: (value: string) => void
-  readOnly?: boolean
-  theme?: string
-  language?: string
-}
 
 export const CodeEditor = ({
   value,

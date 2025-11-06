@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import { CodeEditor } from '../CodeEditor';
 import '@testing-library/jest-dom';
 
-// Mock Monaco Editor
 jest.mock('@monaco-editor/react', () => ({
   Editor: ({ value, onChange }: any) => (
     <div data-testid="mock-editor">
@@ -21,7 +20,6 @@ describe('CodeEditor', () => {
     expect(screen.getByTestId('mock-editor')).toBeInTheDocument();
   });
 
-  // Unit test
   it('passes correct props to Editor', () => {
     const value = 'test code';
     const onChange = jest.fn();
