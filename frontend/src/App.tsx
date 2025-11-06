@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { CodeEditor } from './components/CodeEditor'
-import { ReviewButton, ReviewMode } from './components/ReviewButton'
-import { CopyButton } from './components/CopyButton'
-import { CopyToInputButton } from './components/CopyToInputButton'
-import { LanguageSelector } from './components/LanguageSelector'
-import { reviewCode } from './services/ApiService'
 import './styles/App.css'
+
+import { CodeEditor } from './features/editor';
+import { ReviewButton, CopyButton, CopyToInputButton, LanguageSelector, ReviewMode } from './features/review';
+import { reviewCode } from './features/api';
+
+
 
 const App = () => {
   const [inputCode, setInputCode] = useState('')

@@ -1,4 +1,4 @@
-import { ReviewMode } from '../components/ReviewButton';
+import { ReviewMode } from '../review';
 
 const API_URL = 'http://localhost:3001';
 
